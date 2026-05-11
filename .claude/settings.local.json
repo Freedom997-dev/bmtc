@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.bluemountaintravelcenter.com)",
+      "Bash(npm --version)",
+      "Bash(npx --yes create-next-app@latest . --typescript --tailwind --app --eslint --use-npm --yes --no-src-dir --import-alias \"@/*\")",
+      "Bash(npx --yes create-next-app@latest bmtc-web --typescript --tailwind --app --eslint --use-npm --yes --no-src-dir --import-alias \"@/*\")",
+      "Bash(rm bmtc-web/CLAUDE.md && mv bmtc-web/.git bmtc-web/.gitignore bmtc-web/.next . && mv bmtc-web/AGENTS.md bmtc-web/README.md bmtc-web/app bmtc-web/eslint.config.mjs bmtc-web/next-env.d.ts bmtc-web/next.config.ts bmtc-web/node_modules bmtc-web/package-lock.json bmtc-web/package.json bmtc-web/postcss.config.mjs bmtc-web/public bmtc-web/tsconfig.json . && rmdir bmtc-web && mv _CLAUDE.md.tmp CLAUDE.md && ls -la)",
+      "Bash(npx --yes shadcn@latest init --yes --base-color neutral)",
+      "Bash(npx --yes shadcn@latest init --help)",
+      "Bash(npx --yes shadcn@latest init --defaults --yes)",
+      "Bash(npx --yes shadcn@latest add card sheet form input textarea label select separator dialog --yes)",
+      "Bash(npx --yes shadcn@latest add form --yes)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}
