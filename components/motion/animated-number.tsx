@@ -19,24 +19,23 @@ export function AnimatedNumber({
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.6 });
   const reduce = useReducedMotion();
-  const [display, setDisplay] = useState(reduce ? value : 0);
+  const [animated, setAnimated] = useState(0);
 
   useEffect(() => {
-    if (!inView || reduce) {
-      setDisplay(value);
-      return;
-    }
+    if (!inView || reduce) return;
     let raf = 0;
     const start = performance.now();
     const animate = (now: number) => {
       const t = Math.min(1, (now - start) / (duration * 1000));
       const eased = 1 - Math.pow(1 - t, 3);
-      setDisplay(Math.round(value * eased));
+      setAnimated(Math.round(value * eased));
       if (t < 1) raf = requestAnimationFrame(animate);
     };
     raf = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(raf);
   }, [inView, reduce, value, duration]);
+
+  const display = reduce ? value : animated;
 
   return (
     <span ref={ref} className={className}>

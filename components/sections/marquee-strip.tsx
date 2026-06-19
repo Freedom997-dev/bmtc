@@ -25,7 +25,7 @@ export function MarqueeStrip() {
       <Marquee
         duration={36}
         items={items.map(({ icon: Icon, label }) => (
-          <span className="flex items-center gap-2.5">
+          <span key={label} className="flex items-center gap-2.5">
             <Icon className="h-4 w-4 text-amber-400" />
             <span>{label}</span>
           </span>
