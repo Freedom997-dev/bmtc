@@ -98,6 +98,17 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-05-21** — Real photos + verified business info:
+  - 8 owner-provided photos copied to `public/images/` with descriptive names
+  - Hero now uses `hero-marathon-sky.jpg` as a backdrop layer (50% opacity behind aurora + streaks)
+  - About preview shows `station-dusk.jpg` (replacing the placeholder panel)
+  - Fuel service row shows `fuel-marathon-pumps.jpg`; Food/Store row shows `store-categories.jpg`
+  - Location section now includes `roadside-sign-sunset.jpg` above the map
+  - Gallery rebuilt with 8 real photos + 4 gradient icon tiles (for items we don't have photos of yet — showers, parking, coffee, WiFi)
+  - `lib/services.ts` updated to reflect fuel brand is **Marathon** and store is **Eagle Mart**; added `hasPhoto: boolean` flag so service rows branch between `<Image>` and the gradient placeholder cleanly
+  - Phone confirmed: (570) 968-4037 — `tel:` link now reaches the real line
+  - JSON-LD schema adds `aggregateRating` (5.0★ on Google, 10 reviews), `contactPoint`, and `sameAs` for the Google Business listing
+  - New `<GoogleRatingBadge />` component placed in Hero and Testimonials
 - **2026-05-21** — Confirmed location:
   - Updated `lib/site-config.ts` with the real address: 511 PA-61 S, Schuylkill Haven, PA 17972
   - Coords: 40.6448189, -76.1412458 (from owner's Google Maps share link)

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Navigation, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { MapEmbed } from "@/components/map-embed";
@@ -16,9 +17,24 @@ export function LocationPreview() {
           </p>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Easy on, easy off</h2>
           <p className="text-base text-muted-foreground">
-            Take {siteConfig.highway.interstate} to {siteConfig.highway.exit}. The
-            lot is well-lit, wide-aisled, and built for trucks of every size.
+            Take {siteConfig.highway.interstate} to {siteConfig.highway.exit}. Watch
+            for the lit Marathon price sign — that&apos;s us.
           </p>
+
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">
+            <Image
+              src="/images/roadside-sign-sunset.jpg"
+              alt="Marathon roadside price sign visible from PA-61 at sunset"
+              fill
+              sizes="(min-width: 768px) 35vw, 100vw"
+              className="object-cover"
+            />
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"
+            />
+          </div>
+
           <address className="space-y-1 not-italic">
             <p className="flex items-start gap-2 text-base font-medium">
               <MapPin className="mt-1 h-4 w-4 shrink-0 text-amber-600" />
