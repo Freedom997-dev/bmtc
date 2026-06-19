@@ -13,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <div aria-hidden className="h-1 bg-red-600" />
       <MarqueeStrip />
       <ServicesStrip />
       <AboutPreview />

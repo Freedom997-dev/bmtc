@@ -49,7 +49,7 @@ export const siteConfig = {
   },
 
   whyUs: [
-    { title: "300+ truck spots", body: "Spacious, well-lit parking with overnight stay welcome." },
+    { title: "30+ truck spots", body: "Spacious, well-lit parking with overnight stay welcome." },
     { title: "Spotless showers", body: "Cleaned hourly — a real shower after a long haul." },
     { title: "Hot food till late", body: "Restaurant + grab-and-go open when the highway is quiet." },
   ],

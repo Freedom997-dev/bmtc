@@ -11,7 +11,7 @@ export function AboutPreview() {
     <section className="bg-muted/30">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-20 sm:px-6 md:grid-cols-2 md:py-28 lg:px-8">
         <Reveal direction="right" className="flex flex-col justify-center gap-5">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
             About us
           </p>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">

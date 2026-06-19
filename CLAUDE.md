@@ -98,6 +98,17 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-05-21** — Marathon blue wash on alternating sections:
+  - `--muted` in `app/globals.css` changed from neutral `oklch(0.97 0 0)` (no hue) to **`oklch(0.965 0.018 248)`** — a light cool blue wash with a hint of Marathon's brand blue
+  - Affects every section using `bg-muted/30` (AboutPreview, AmenitiesGrid, LocationPreview, inner-page secondary sections) — they now read subtly on-brand instead of generically gray
+  - `--muted-foreground` left neutral on purpose so all body copy stays high-readability
+- **2026-05-21** — Marathon red + white emphasis pass:
+  - Primary CTAs (Call buttons in Hero and CTA-banner) → **red** (`bg-red-600` with red glow on hover) — matches Marathon's M-mark action color
+  - Hero "live" pill → red border + red bg + red pinging dot + light-red text (mimics Marathon "Open 24/7" red signage)
+  - **18 section eyebrow labels** ("Services in detail", "About us", etc.) now have a red accent stripe (`h-0.5 w-8 bg-red-600`) preceding the blue text — a small visual tribute to the Marathon canopy wing
+  - New thin red canopy-stripe (`h-1 bg-red-600`) divider between Hero and MarqueeStrip on the home page
+  - MarqueeStrip retuned: white text on slate-950 with red separator dots and red icon highlights (drop "blue-100" → "white"; "blue-600" → "red-500"); preserves blue border-y to keep the brand frame
+  - Net visual hierarchy now: BLUE = brand identity, RED = action/emphasis, WHITE = content; matches Marathon's real-world materials
 - **2026-05-21** — Marathon brand retheme:
   - Theme moved from amber/gold to Marathon-aligned **blue + red + white** (primary blue ≈ Tailwind blue-600 / Marathon #003DA5; accent red for the OG icon border; rating stars stay yellow because that's the universal Google convention)
   - Bulk sed swap of every `amber-*` Tailwind class to `blue-*` equivalents across 20 files (sections, pages, layout, motion components)

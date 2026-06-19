@@ -42,7 +42,7 @@ export default function ContactPage() {
           className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37, 99, 235,0.18),_transparent_60%)]"
         />
         <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
+          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-400"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
             Contact & Location
           </p>
           <h1 className="mt-2 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -59,7 +59,7 @@ export default function ContactPage() {
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-20 lg:px-8">
           <div className="flex flex-col gap-7">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+              <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
                 Get in touch
               </p>
               <h2 className="mt-1 text-2xl font-bold tracking-tight">
@@ -145,7 +145,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
               Send a message
             </p>
             <h2 className="mt-1 text-2xl font-bold tracking-tight">
@@ -163,7 +163,7 @@ export default function ContactPage() {
 
       <section className="bg-muted/30">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
             Find us on the map
           </p>
           <h2 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">

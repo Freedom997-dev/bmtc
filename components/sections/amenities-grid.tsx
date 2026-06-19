@@ -16,7 +16,7 @@ export function AmenitiesGrid({
         {withHeader && (
           <Reveal>
             <div className="mb-10 flex flex-col gap-2">
-              <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+              <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
                 Amenities
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>

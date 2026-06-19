@@ -10,7 +10,7 @@ export function ServicesStrip() {
         <Reveal>
           <div className="mb-10 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+              <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
                 What we offer
               </p>
               <h2 className="mt-1 text-3xl font-bold tracking-tight sm:text-4xl">

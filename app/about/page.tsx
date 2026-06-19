@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Mountain, ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
+import Image from "next/image";
+import { ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
@@ -40,7 +41,7 @@ export default function AboutPage() {
         />
         <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
           <Reveal>
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
+            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-400"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
               About
             </p>
           </Reveal>
@@ -62,7 +63,7 @@ export default function AboutPage() {
       <section className="bg-background">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-20 lg:px-8">
           <div className="flex flex-col gap-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
               Our story
             </p>
             <h2 className="text-3xl font-bold tracking-tight">
@@ -84,24 +85,25 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">
+            <Image
+              src="/images/station-dusk.jpg"
+              alt="Front of Blue Mountain Travel Center — Marathon canopy with the Eagle Mart store and OPEN 24/7 sign at dusk"
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover"
+            />
             <div
               aria-hidden
-              className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(37, 99, 235,0.18),_transparent_55%)]"
+              className="absolute inset-0 bg-gradient-to-tr from-slate-950/40 via-transparent to-transparent"
             />
-            <div className="relative flex h-full flex-col items-center justify-center gap-3 p-8 text-center">
-              <Mountain className="h-12 w-12 text-blue-400" />
-              <p className="max-w-xs text-pretty text-sm text-slate-300">
-                Photo placeholder — replace with a facility or team photo
-              </p>
-            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-muted/30">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
             Why drivers trust us
           </p>
           <h2 className="mt-2 max-w-2xl text-3xl font-bold tracking-tight">

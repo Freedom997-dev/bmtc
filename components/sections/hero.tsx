@@ -15,10 +15,10 @@ export function Hero() {
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-24 sm:px-6 md:py-32 lg:py-40 lg:px-8">
         <Reveal>
           <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-blue-600/30 bg-blue-600/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-blue-200 backdrop-blur">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-red-500/40 bg-red-600/15 px-3 py-1 text-xs font-medium uppercase tracking-wider text-red-100 backdrop-blur">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600/70" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-600" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-red-500/70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-red-500" />
               </span>
               <MapPin className="h-3.5 w-3.5" />
               {siteConfig.highway.interstate} · {siteConfig.address.state} · Open right now
@@ -47,7 +47,7 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="group gap-2 bg-blue-600 text-white shadow-[0_0_0_0_rgba(37, 99, 235,0.6)] transition-shadow hover:bg-blue-400 hover:shadow-[0_0_40px_2px_rgba(37, 99, 235,0.45)]"
+              className="group gap-2 bg-red-600 text-white shadow-[0_0_0_0_rgba(225,27,34,0.6)] transition-shadow hover:bg-red-500 hover:shadow-[0_0_40px_2px_rgba(225,27,34,0.5)]"
             >
               <a href={`tel:${siteConfig.phone}`}>
                 <Phone className="h-4 w-4 transition-transform group-hover:rotate-12" />
@@ -82,7 +82,7 @@ export function Hero() {
         <Reveal delay={0.32}>
           <dl className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 pt-8 sm:grid-cols-4">
             <Stat label="Open" value="24 / 7" />
-            <NumericStat label="Truck spots" value={300} suffix="+" />
+            <NumericStat label="Truck spots" value={30} suffix="+" />
             <Stat label="Showers" value="Hourly clean" />
             <Stat label="WiFi" value="Free" />
           </dl>

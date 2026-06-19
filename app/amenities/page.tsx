@@ -21,7 +21,7 @@ export default function AmenitiesPage() {
           className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37, 99, 235,0.18),_transparent_60%)]"
         />
         <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
+          <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-400"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
             Amenities & Gallery
           </p>
           <h1 className="mt-2 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -39,7 +39,7 @@ export default function AmenitiesPage() {
       <section className="bg-background">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
           <div className="mb-8 flex flex-col gap-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
               Gallery
             </p>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">

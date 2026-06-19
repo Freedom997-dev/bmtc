@@ -9,7 +9,7 @@ export function Testimonials() {
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
         <Reveal>
           <div className="mb-10 flex flex-col gap-3">
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
+            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-700"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
               From the road
             </p>
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">

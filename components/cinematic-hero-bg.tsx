@@ -22,7 +22,7 @@ export function CinematicHeroBg({
   }, [videoSrc]);
 
   return (
-    <div aria-hidden className="absolute inset-0 overflow-hidden">
+    <div aria-hidden className="absolute inset-0 overflow-hidden bg-slate-950">
       {photoSrc && (
         <Image
           src={photoSrc}
@@ -30,25 +30,30 @@ export function CinematicHeroBg({
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-50"
+          className="object-cover"
         />
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-950/60 to-slate-950" />
+      {/* Diagonal contrast wash — darkens bottom-left where text lives, leaves upper-right photo clean. */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/85 via-slate-950/50 to-slate-950/10" />
 
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37, 99, 235,0.18),_transparent_60%)]" />
-      <div className="absolute inset-0 bg-aurora opacity-50" />
+      {/* Top edge subtle darkening to anchor the live pill / nav. */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-950/40 to-transparent" />
+
+      {/* Bottom fade to slate-950 so the marquee strip transitions cleanly. */}
+      <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-slate-950 to-transparent" />
+
+      {/* Single moving streak (kept) — feels like a passing headlight without overwhelming the photo. */}
       <div className="absolute inset-0">
-        <span className="streak streak-1" />
         <span className="streak streak-2" />
-        <span className="streak streak-3" />
         <span className="streak streak-4" />
-        <span className="streak streak-5" />
       </div>
 
-      <div className="absolute -bottom-32 left-1/2 h-64 w-[120%] -translate-x-1/2 rounded-[100%] bg-blue-600/10 blur-3xl" />
+      {/* Subtle Marathon brand halo at bottom — small chromatic accent. */}
+      <div className="absolute -bottom-24 left-1/2 h-48 w-[110%] -translate-x-1/2 rounded-[100%] bg-blue-600/12 blur-3xl" />
 
-      <div className="absolute inset-0 bg-grain opacity-[0.05] mix-blend-overlay" />
+      {/* Very subtle grain. */}
+      <div className="absolute inset-0 bg-grain opacity-[0.04] mix-blend-overlay" />
 
       {videoSrc && videoReady && (
         <video
@@ -63,8 +68,6 @@ export function CinematicHeroBg({
           <source src={videoSrc} type="video/mp4" />
         </video>
       )}
-
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-slate-950" />
     </div>
   );
 }

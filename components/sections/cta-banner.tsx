@@ -16,7 +16,7 @@ export function CtaBanner() {
       <div className="relative mx-auto flex w-full max-w-6xl flex-col items-start gap-6 px-4 py-20 sm:px-6 md:flex-row md:items-center md:justify-between md:py-24 lg:px-8">
         <Reveal direction="right">
           <div className="max-w-2xl">
-            <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
+            <p className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-wider text-blue-400"><span aria-hidden className="inline-block h-0.5 w-8 bg-red-600" />
               Pulling in tonight?
             </p>
             <h2 className="mt-2 text-3xl font-bold tracking-tight sm:text-4xl">
@@ -33,7 +33,7 @@ export function CtaBanner() {
             <Button
               asChild
               size="lg"
-              className="group gap-2 bg-blue-600 text-white shadow-[0_0_0_0_rgba(37, 99, 235,0.6)] transition-shadow hover:bg-blue-400 hover:shadow-[0_0_40px_2px_rgba(37, 99, 235,0.5)]"
+              className="group gap-2 bg-red-600 text-white shadow-[0_0_0_0_rgba(225,27,34,0.6)] transition-shadow hover:bg-red-500 hover:shadow-[0_0_40px_2px_rgba(225,27,34,0.55)]"
             >
               <a href={`tel:${siteConfig.phone}`}>
                 <Phone className="h-4 w-4 transition-transform group-hover:rotate-12" />

@@ -69,9 +69,9 @@ export const services: Service[] = [
     name: "Truck Parking",
     short: "Overnight parking welcome",
     description:
-      "Hundreds of well-lit truck and RV parking spots with overnight stay welcome, security cameras, and easy on/off highway access.",
+      "30+ well-lit truck and RV parking spots with overnight stay welcome, security cameras, and easy on/off highway access.",
     bullets: [
-      "Hundreds of truck-sized spots",
+      "30+ truck-sized spots",
       "Well-lit lot, security cameras",
       "Overnight stay welcome",
       "RVs and oversized vehicles OK",
