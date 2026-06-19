@@ -20,9 +20,11 @@ A marketing / info website for **Blue Mountain Travel Center LLC**, a full-servi
 
 | Field | Best-known value | Status |
 |---|---|---|
-| Business name | Blue Mountain Travel Center LLC | Confirmed (from Google share link) |
-| Address | TBD | **Needs owner confirmation** |
-| City / State / ZIP | TBD (likely PA based on similarly-named entities) | **Needs owner confirmation** |
+| Business name | Blue Mountain Travel Center LLC | Confirmed (Google Business listing) |
+| Street | 511 PA-61 S | Confirmed (Google Maps + GasBuddy 2026-05-21) |
+| City / State / ZIP | Schuylkill Haven, PA 17972 | Confirmed |
+| Coordinates | 40.6448189, -76.1412458 | Confirmed (Google Maps share link) |
+| Highway access | I-81 Exit 116 (PA-901) → PA-61 South | Confirmed by geocoding |
 | Phone | TBD | **Needs owner confirmation** |
 | Email | TBD | **Needs owner confirmation** |
 | Hours | TBD — likely 24/7 for a truck stop | **Needs owner confirmation** |
@@ -96,6 +98,12 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-05-21** — Confirmed location:
+  - Updated `lib/site-config.ts` with the real address: 511 PA-61 S, Schuylkill Haven, PA 17972
+  - Coords: 40.6448189, -76.1412458 (from owner's Google Maps share link)
+  - Highway: I-81 Exit 116 (PA-901) → PA-61 South
+  - `googleMapsEmbedSrc()` now uses coordinates directly with a labeled pin (more accurate than a name+address search)
+  - JSON-LD `LocalBusiness` schema auto-picks up new coords + address
 - **2026-05-21** — Cinematic motion pass:
   - Added `motion` (Framer Motion) + `lenis` (smooth scroll)
   - New `components/motion/` primitives: `Reveal`, `StaggerGroup`/`StaggerItem`, `AnimatedNumber`, `Parallax`, `SmoothScroll`, `Marquee`

@@ -8,14 +8,14 @@ export const siteConfig = {
     "Full-service truck stop and travel center in the USA. Diesel, hot food, clean showers, laundry, driver lounge, and 24/7 truck parking.",
 
   address: {
-    street: "TODO: confirm street",
-    city: "TODO: confirm city",
+    street: "511 PA-61 S",
+    city: "Schuylkill Haven",
     state: "PA",
-    zip: "TODO",
+    zip: "17972",
     country: "US",
   },
 
-  geo: { lat: 40.1657, lng: -77.6347 },
+  geo: { lat: 40.6448189, lng: -76.1412458 },
 
   phone: "+1-555-555-5555",
   phoneDisplay: "(555) 555-5555",
@@ -33,7 +33,7 @@ export const siteConfig = {
 
   highway: {
     interstate: "I-81",
-    exit: "TODO: confirm exit / mile marker",
+    exit: "Exit 116 (PA-901) → PA-61 South",
   },
 
   social: {
@@ -60,9 +60,7 @@ export function googleMapsUrl(): string {
 }
 
 export function googleMapsEmbedSrc(): string {
-  const a = siteConfig.address;
-  const q = encodeURIComponent(
-    `${siteConfig.name}, ${a.street}, ${a.city}, ${a.state} ${a.zip}`,
-  );
-  return `https://www.google.com/maps?q=${q}&output=embed`;
+  const { lat, lng } = siteConfig.geo;
+  const label = encodeURIComponent(siteConfig.name);
+  return `https://www.google.com/maps?q=${lat},${lng}(${label})&z=16&output=embed`;
 }
