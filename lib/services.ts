@@ -9,40 +9,43 @@ export type Service = {
   icon: LucideIcon;
   image: string;
   imageAlt: string;
+  hasPhoto: boolean;
 };
 
 export const services: Service[] = [
   {
     id: "fuel",
     name: "Fuel",
-    short: "Diesel & gas, 24/7",
+    short: "Marathon diesel & gas, 24/7",
     description:
-      "High-flow diesel lanes for big rigs and standard pumps for cars, RVs, and pickups — open every hour of every day.",
+      "Marathon-branded diesel lanes for big rigs and standard pumps for cars, RVs, and pickups — open every hour of every day, with a price sign you can spot from the highway.",
     bullets: [
-      "High-flow diesel for class 8 trucks",
+      "Marathon diesel for class 8 trucks",
       "Regular, mid, and premium gasoline",
-      "DEF at the pump",
-      "Fleet cards & EFS welcome",
+      "Big well-lit price sign on PA-61",
+      "Fleet cards welcome",
     ],
     icon: Fuel,
-    image: "/images/pumps.jpg",
-    imageAlt: "Fuel pumps at Blue Mountain Travel Center",
+    image: "/images/fuel-marathon-pumps.jpg",
+    imageAlt: "Marathon fuel pumps under the canopy at Blue Mountain Travel Center",
+    hasPhoto: true,
   },
   {
     id: "food",
-    name: "Food",
-    short: "Hot meals & quick bites",
+    name: "Food & Store",
+    short: "Eagle Mart convenience store",
     description:
-      "A full restaurant for drivers who want to sit down and a convenience store stocked with everything you need on the road.",
+      "Eagle Mart on-site — coffee, cold drinks, sandwiches, snacks, milk, and ice. Categorized cooler walls for sport drinks, water, dairy, and soda so you can grab what you need fast.",
     bullets: [
-      "Sit-down restaurant with hot meals",
-      "Grab-and-go deli, snacks, drinks",
       "Hot coffee around the clock",
+      "Cold drinks: soda, sport, water, dairy",
+      "Cold sandwiches, snacks, ice",
       "Convenience store essentials",
     ],
     icon: UtensilsCrossed,
-    image: "/images/restaurant.jpg",
-    imageAlt: "Restaurant interior with warm lighting",
+    image: "/images/store-categories.jpg",
+    imageAlt: "Eagle Mart convenience-store beverage wall labeled Coffee, Sport, Water, Dairy, Soda",
+    hasPhoto: true,
   },
   {
     id: "showers",
@@ -59,6 +62,7 @@ export const services: Service[] = [
     icon: ShowerHead,
     image: "/images/showers.jpg",
     imageAlt: "Clean shower facility at Blue Mountain Travel Center",
+    hasPhoto: false,
   },
   {
     id: "parking",
@@ -75,5 +79,6 @@ export const services: Service[] = [
     icon: ParkingSquare,
     image: "/images/parking.jpg",
     imageAlt: "Well-lit truck parking lot at night",
+    hasPhoto: false,
   },
 ];

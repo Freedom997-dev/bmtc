@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 import type { Service } from "@/lib/services";
@@ -42,17 +43,35 @@ export function ServiceDetailRow({
 
       <div
         className={cn(
-          "relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white",
+          "relative aspect-[4/3] overflow-hidden rounded-2xl border border-border",
           reverse ? "md:order-1" : "md:order-2",
         )}
       >
-        <div
-          aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(251,191,36,0.18),_transparent_55%)]"
-        />
-        <div className="relative flex h-full items-center justify-center">
-          <Icon className="h-24 w-24 text-amber-300/80" strokeWidth={1.25} />
-        </div>
+        {service.hasPhoto ? (
+          <>
+            <Image
+              src={service.image}
+              alt={service.imageAlt}
+              fill
+              sizes="(min-width: 768px) 50vw, 100vw"
+              className="object-cover transition-transform duration-700 hover:scale-105"
+            />
+            <div
+              aria-hidden
+              className="pointer-events-none absolute inset-0 bg-gradient-to-t from-slate-950/40 via-transparent to-transparent"
+            />
+          </>
+        ) : (
+          <div className="relative h-full w-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white">
+            <div
+              aria-hidden
+              className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(251,191,36,0.18),_transparent_55%)]"
+            />
+            <div className="relative flex h-full items-center justify-center">
+              <Icon className="h-24 w-24 text-amber-300/80" strokeWidth={1.25} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
