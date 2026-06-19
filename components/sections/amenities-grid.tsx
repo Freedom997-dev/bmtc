@@ -16,7 +16,7 @@ export function AmenitiesGrid({
         {withHeader && (
           <Reveal>
             <div className="mb-10 flex flex-col gap-2">
-              <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+              <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
                 Amenities
               </p>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
@@ -32,8 +32,8 @@ export function AmenitiesGrid({
             const Icon = a.icon;
             return (
               <StaggerItem key={a.id}>
-                <div className="hover-lift group flex h-full flex-col items-start gap-3 rounded-xl border border-border bg-card p-5 hover:border-amber-400/60">
-                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-400/15 text-amber-700 transition-colors group-hover:bg-amber-400/30 dark:text-amber-300">
+                <div className="hover-lift group flex h-full flex-col items-start gap-3 rounded-xl border border-border bg-card p-5 hover:border-blue-600/60">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600/15 text-blue-800 transition-colors group-hover:bg-blue-600/30 dark:text-blue-400">
                     <Icon className="h-5 w-5 transition-transform group-hover:rotate-6" />
                   </span>
                   <p className="text-sm font-medium">{a.name}</p>

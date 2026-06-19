@@ -9,7 +9,7 @@ export function Testimonials() {
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
         <Reveal>
           <div className="mb-10 flex flex-col gap-3">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
               From the road
             </p>
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
@@ -23,8 +23,8 @@ export function Testimonials() {
         <StaggerGroup className="grid gap-5 md:grid-cols-3" stagger={0.1}>
           {testimonials.map((t) => (
             <StaggerItem key={t.name}>
-              <div className="hover-lift flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-7 hover:border-amber-400/60">
-                <Quote className="h-6 w-6 text-amber-500" />
+              <div className="hover-lift flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-7 hover:border-blue-600/60">
+                <Quote className="h-6 w-6 text-blue-600" />
                 <blockquote className="flex-1 text-base text-foreground">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>

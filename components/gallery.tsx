@@ -70,7 +70,7 @@ const tiles: Tile[] = [
 ];
 
 const accents = [
-  "bg-[radial-gradient(circle_at_30%_30%,_rgba(251,191,36,0.22),_transparent_55%)]",
+  "bg-[radial-gradient(circle_at_30%_30%,_rgba(37, 99, 235,0.22),_transparent_55%)]",
   "bg-[radial-gradient(circle_at_70%_70%,_rgba(56,189,248,0.18),_transparent_55%)]",
   "bg-[radial-gradient(circle_at_50%_30%,_rgba(167,139,250,0.18),_transparent_55%)]",
 ];
@@ -123,7 +123,7 @@ function IconTileView({
       <div aria-hidden className={`absolute inset-0 ${accent}`} />
       <div className="relative flex h-full flex-col items-start justify-between p-5">
         <Icon
-          className="h-7 w-7 text-amber-300/80 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+          className="h-7 w-7 text-blue-400/80 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
           strokeWidth={1.5}
         />
         <p className="text-sm font-medium text-slate-200">{caption}</p>

@@ -8,7 +8,7 @@ export function ServicesDetail() {
       <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-28 lg:px-8">
         <Reveal>
           <div className="mb-12 flex flex-col gap-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
               Services in detail
             </p>
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">

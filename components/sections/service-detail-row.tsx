@@ -22,7 +22,7 @@ export function ServiceDetailRow({
           reverse ? "md:order-2" : "md:order-1",
         )}
       >
-        <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/15 text-amber-700 dark:text-amber-300">
+        <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600/15 text-blue-800 dark:text-blue-400">
           <Icon className="h-6 w-6" />
         </span>
         <h3 className="text-2xl font-bold tracking-tight sm:text-3xl">
@@ -34,7 +34,7 @@ export function ServiceDetailRow({
         <ul className="grid gap-3">
           {service.bullets.map((b) => (
             <li key={b} className="flex items-start gap-3 text-sm">
-              <Check className="mt-0.5 h-4 w-4 shrink-0 text-amber-600" />
+              <Check className="mt-0.5 h-4 w-4 shrink-0 text-blue-700" />
               <span>{b}</span>
             </li>
           ))}
@@ -65,10 +65,10 @@ export function ServiceDetailRow({
           <div className="relative h-full w-full bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white">
             <div
               aria-hidden
-              className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(251,191,36,0.18),_transparent_55%)]"
+              className="absolute inset-0 bg-[radial-gradient(circle_at_70%_30%,_rgba(37, 99, 235,0.18),_transparent_55%)]"
             />
             <div className="relative flex h-full items-center justify-center">
-              <Icon className="h-24 w-24 text-amber-300/80" strokeWidth={1.25} />
+              <Icon className="h-24 w-24 text-blue-400/80" strokeWidth={1.25} />
             </div>
           </div>
         )}

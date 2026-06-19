@@ -98,6 +98,13 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-05-21** — Marathon brand retheme:
+  - Theme moved from amber/gold to Marathon-aligned **blue + red + white** (primary blue ≈ Tailwind blue-600 / Marathon #003DA5; accent red for the OG icon border; rating stars stay yellow because that's the universal Google convention)
+  - Bulk sed swap of every `amber-*` Tailwind class to `blue-*` equivalents across 20 files (sections, pages, layout, motion components)
+  - Cinematic CSS in `app/globals.css` retuned: aurora now blends Marathon blue, brand blue, and a hint of red; light streaks shifted to near-white (modern LED headlight feel) with a faint blue glow; hover-lift shadow uses Marathon blue
+  - Hero/CTA buttons `bg-amber-400 text-slate-950` → `bg-blue-600 text-white` with blue glow shadow on hover
+  - `app/opengraph-image.tsx` re-themed: blue logo chip with a thin Marathon-red border on dark gradient
+  - Build clean; all 9 routes still prerendered as static; no `amber-*` or `rgba(251,191,36*` references remain
 - **2026-05-21** — Real photos + verified business info:
   - 8 owner-provided photos copied to `public/images/` with descriptive names
   - Hero now uses `hero-marathon-sky.jpg` as a backdrop layer (50% opacity behind aurora + streaks)

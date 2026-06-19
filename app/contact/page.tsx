@@ -39,10 +39,10 @@ export default function ContactPage() {
         <div aria-hidden className="absolute inset-0 bg-aurora opacity-50" />
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(251,191,36,0.18),_transparent_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37, 99, 235,0.18),_transparent_60%)]"
         />
         <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
             Contact & Location
           </p>
           <h1 className="mt-2 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
@@ -59,7 +59,7 @@ export default function ContactPage() {
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-20 lg:px-8">
           <div className="flex flex-col gap-7">
             <div>
-              <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+              <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
                 Get in touch
               </p>
               <h2 className="mt-1 text-2xl font-bold tracking-tight">
@@ -69,7 +69,7 @@ export default function ContactPage() {
 
             <ul className="grid gap-4">
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-400/15 text-amber-700 dark:text-amber-300">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600/15 text-blue-800 dark:text-blue-400">
                   <Phone className="h-4 w-4" />
                 </span>
                 <div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-400/15 text-amber-700 dark:text-amber-300">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600/15 text-blue-800 dark:text-blue-400">
                   <Mail className="h-4 w-4" />
                 </span>
                 <div>
@@ -97,7 +97,7 @@ export default function ContactPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-400/15 text-amber-700 dark:text-amber-300">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600/15 text-blue-800 dark:text-blue-400">
                   <MapPin className="h-4 w-4" />
                 </span>
                 <div>
@@ -126,7 +126,7 @@ export default function ContactPage() {
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-amber-400/15 text-amber-700 dark:text-amber-300">
+                <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-blue-600/15 text-blue-800 dark:text-blue-400">
                   <Clock className="h-4 w-4" />
                 </span>
                 <div>
@@ -145,7 +145,7 @@ export default function ContactPage() {
           </div>
 
           <div>
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
               Send a message
             </p>
             <h2 className="mt-1 text-2xl font-bold tracking-tight">
@@ -163,7 +163,7 @@ export default function ContactPage() {
 
       <section className="bg-muted/30">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
             Find us on the map
           </p>
           <h2 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">

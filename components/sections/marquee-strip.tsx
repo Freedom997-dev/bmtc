@@ -21,12 +21,12 @@ const items = [
 
 export function MarqueeStrip() {
   return (
-    <div className="relative bg-slate-950 text-amber-100 border-y border-amber-400/15">
+    <div className="relative bg-slate-950 text-blue-100 border-y border-blue-600/15">
       <Marquee
         duration={36}
         items={items.map(({ icon: Icon, label }) => (
           <span key={label} className="flex items-center gap-2.5">
-            <Icon className="h-4 w-4 text-amber-400" />
+            <Icon className="h-4 w-4 text-blue-600" />
             <span>{label}</span>
           </span>
         ))}

@@ -15,10 +15,10 @@ export function Hero() {
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-24 sm:px-6 md:py-32 lg:py-40 lg:px-8">
         <Reveal>
           <div className="flex flex-wrap items-center gap-2">
-            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-amber-200 backdrop-blur">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-blue-600/30 bg-blue-600/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-blue-200 backdrop-blur">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400/70" />
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-blue-600/70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-blue-600" />
               </span>
               <MapPin className="h-3.5 w-3.5" />
               {siteConfig.highway.interstate} · {siteConfig.address.state} · Open right now
@@ -30,7 +30,7 @@ export function Hero() {
         <Reveal delay={0.08}>
           <h1 className="max-w-4xl text-balance text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
             Your highway home —{" "}
-            <span className="bg-gradient-to-r from-amber-200 via-amber-300 to-amber-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-blue-200 via-blue-400 to-blue-600 bg-clip-text text-transparent">
               24/7 diesel, food, showers & parking
             </span>
           </h1>
@@ -47,7 +47,7 @@ export function Hero() {
             <Button
               asChild
               size="lg"
-              className="group gap-2 bg-amber-400 text-slate-950 shadow-[0_0_0_0_rgba(251,191,36,0.6)] transition-shadow hover:bg-amber-300 hover:shadow-[0_0_40px_2px_rgba(251,191,36,0.45)]"
+              className="group gap-2 bg-blue-600 text-white shadow-[0_0_0_0_rgba(37, 99, 235,0.6)] transition-shadow hover:bg-blue-400 hover:shadow-[0_0_40px_2px_rgba(37, 99, 235,0.45)]"
             >
               <a href={`tel:${siteConfig.phone}`}>
                 <Phone className="h-4 w-4 transition-transform group-hover:rotate-12" />

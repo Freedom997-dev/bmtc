@@ -36,11 +36,11 @@ export default function AboutPage() {
         <div aria-hidden className="absolute inset-0 bg-aurora opacity-50" />
         <div
           aria-hidden
-          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(251,191,36,0.18),_transparent_60%)]"
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(37, 99, 235,0.18),_transparent_60%)]"
         />
         <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
           <Reveal>
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-400">
               About
             </p>
           </Reveal>
@@ -62,7 +62,7 @@ export default function AboutPage() {
       <section className="bg-background">
         <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-16 sm:px-6 md:grid-cols-2 md:py-20 lg:px-8">
           <div className="flex flex-col gap-5">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+            <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
               Our story
             </p>
             <h2 className="text-3xl font-bold tracking-tight">
@@ -87,10 +87,10 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white">
             <div
               aria-hidden
-              className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(251,191,36,0.18),_transparent_55%)]"
+              className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(37, 99, 235,0.18),_transparent_55%)]"
             />
             <div className="relative flex h-full flex-col items-center justify-center gap-3 p-8 text-center">
-              <Mountain className="h-12 w-12 text-amber-300" />
+              <Mountain className="h-12 w-12 text-blue-400" />
               <p className="max-w-xs text-pretty text-sm text-slate-300">
                 Photo placeholder — replace with a facility or team photo
               </p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
 
       <section className="bg-muted/30">
         <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+          <p className="text-sm font-semibold uppercase tracking-wider text-blue-700">
             Why drivers trust us
           </p>
           <h2 className="mt-2 max-w-2xl text-3xl font-bold tracking-tight">
@@ -112,8 +112,8 @@ export default function AboutPage() {
               const Icon = p.icon;
               return (
                 <StaggerItem key={p.title}>
-                  <div className="hover-lift group flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-7 hover:border-amber-400/60">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/15 text-amber-700 transition-colors group-hover:bg-amber-400/30 dark:text-amber-300">
+                  <div className="hover-lift group flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-7 hover:border-blue-600/60">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-600/15 text-blue-800 transition-colors group-hover:bg-blue-600/30 dark:text-blue-400">
                       <Icon className="h-6 w-6 transition-transform group-hover:scale-110" />
                     </span>
                     <h3 className="text-xl font-semibold tracking-tight">{p.title}</h3>

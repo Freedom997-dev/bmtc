@@ -29,7 +29,7 @@ export default function OpengraphImage() {
             alignItems: "center",
             gap: "16px",
             fontSize: "20px",
-            color: "#fcd34d",
+            color: "#93c5fd",
             letterSpacing: "0.12em",
             textTransform: "uppercase",
           }}
@@ -39,13 +39,14 @@ export default function OpengraphImage() {
               width: "44px",
               height: "44px",
               borderRadius: "10px",
-              background: "#fbbf24",
+              background: "#2563eb",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              color: "#0f172a",
+              color: "#ffffff",
               fontWeight: 700,
               fontSize: "22px",
+              border: "2px solid #e11b22",
             }}
           >
             BM

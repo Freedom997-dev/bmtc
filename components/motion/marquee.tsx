@@ -37,10 +37,10 @@ export function Marquee({
         {loop.map((item, i) => (
           <span
             key={i}
-            className="flex shrink-0 items-center gap-3 text-sm font-medium uppercase tracking-[0.18em] text-amber-100/80"
+            className="flex shrink-0 items-center gap-3 text-sm font-medium uppercase tracking-[0.18em] text-blue-100/80"
           >
             {item}
-            <span className="text-amber-400/60">·</span>
+            <span className="text-blue-600/60">·</span>
           </span>
         ))}
       </motion.div>

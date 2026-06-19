@@ -26,8 +26,8 @@ export function GoogleRatingBadge({
       className={cn(
         "inline-flex w-fit items-center gap-2.5 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors",
         variant === "dark"
-          ? "border-amber-400/30 bg-amber-400/10 text-amber-100 hover:bg-amber-400/15"
-          : "border-amber-200 bg-amber-50 text-amber-900 hover:bg-amber-100 dark:border-amber-400/30 dark:bg-amber-400/10 dark:text-amber-100",
+          ? "border-blue-600/30 bg-blue-600/10 text-blue-100 hover:bg-blue-600/15"
+          : "border-blue-200 bg-blue-50 text-blue-900 hover:bg-blue-100 dark:border-blue-600/30 dark:bg-blue-600/10 dark:text-blue-100",
       )}
     >
       <span className="flex items-center" aria-hidden>
@@ -36,7 +36,7 @@ export function GoogleRatingBadge({
             key={i}
             className={cn(
               "h-3.5 w-3.5",
-              i < Math.round(value) ? "fill-amber-400 text-amber-400" : "text-amber-300/40",
+              i < Math.round(value) ? "fill-yellow-400 text-yellow-400" : "text-yellow-200/40",
             )}
           />
         ))}
