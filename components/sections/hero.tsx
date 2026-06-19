@@ -5,6 +5,7 @@ import { siteConfig, googleMapsUrl } from "@/lib/site-config";
 import { CinematicHeroBg } from "@/components/cinematic-hero-bg";
 import { Reveal } from "@/components/motion/reveal";
 import { AnimatedNumber } from "@/components/motion/animated-number";
+import { GoogleRatingBadge } from "@/components/google-rating-badge";
 
 export function Hero() {
   return (
@@ -13,14 +14,17 @@ export function Hero() {
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-24 sm:px-6 md:py-32 lg:py-40 lg:px-8">
         <Reveal>
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-amber-200 backdrop-blur">
-            <span className="relative flex h-2 w-2">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400/70" />
-              <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400" />
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex w-fit items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-amber-200 backdrop-blur">
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400/70" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-amber-400" />
+              </span>
+              <MapPin className="h-3.5 w-3.5" />
+              {siteConfig.highway.interstate} · {siteConfig.address.state} · Open right now
             </span>
-            <MapPin className="h-3.5 w-3.5" />
-            {siteConfig.highway.interstate} · {siteConfig.address.state} · Open right now
-          </span>
+            <GoogleRatingBadge variant="dark" />
+          </div>
         </Reveal>
 
         <Reveal delay={0.08}>

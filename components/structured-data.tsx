@@ -53,6 +53,21 @@ export function StructuredData() {
       { "@type": "LocationFeatureSpecification", name: "ATM", value: true },
       { "@type": "LocationFeatureSpecification", name: "Laundry", value: true },
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: siteConfig.rating.value,
+      reviewCount: siteConfig.rating.count,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    sameAs: [siteConfig.googleBusinessUrl],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: siteConfig.phone,
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: "en",
+    },
   };
 
   return (

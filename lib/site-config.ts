@@ -8,7 +8,7 @@ export const siteConfig = {
     "Full-service truck stop and travel center in the USA. Diesel, hot food, clean showers, laundry, driver lounge, and 24/7 truck parking.",
 
   address: {
-    street: "511 PA-61 S",
+    street: "511 PA-61",
     city: "Schuylkill Haven",
     state: "PA",
     zip: "17972",
@@ -17,9 +17,15 @@ export const siteConfig = {
 
   geo: { lat: 40.6448189, lng: -76.1412458 },
 
-  phone: "+1-555-555-5555",
-  phoneDisplay: "(555) 555-5555",
+  phone: "+1-570-968-4037",
+  phoneDisplay: "(570) 968-4037",
   email: "info@bluemountaintravelcenter.com",
+
+  category: "Gas station & convenience store (travel center)",
+
+  rating: { value: 5.0, count: 10, source: "Google" },
+
+  googleBusinessUrl: "https://maps.google.com/?cid=10931707795226198303",
 
   hours: {
     monday: "Open 24 hours",
