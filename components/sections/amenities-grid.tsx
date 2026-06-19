@@ -1,4 +1,5 @@
 import { amenities } from "@/lib/amenities";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 
 export function AmenitiesGrid({
   title = "Everything else you need",
@@ -11,32 +12,36 @@ export function AmenitiesGrid({
 }) {
   return (
     <section className="bg-muted/30">
-      <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+      <div className="mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
         {withHeader && (
-          <div className="mb-10 flex flex-col gap-2">
-            <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
-              Amenities
-            </p>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
-            <p className="max-w-2xl text-base text-muted-foreground">{subtitle}</p>
-          </div>
+          <Reveal>
+            <div className="mb-10 flex flex-col gap-2">
+              <p className="text-sm font-semibold uppercase tracking-wider text-amber-600">
+                Amenities
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">{title}</h2>
+              <p className="max-w-2xl text-base text-muted-foreground">{subtitle}</p>
+            </div>
+          </Reveal>
         )}
-        <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+        <StaggerGroup
+          className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5"
+          stagger={0.05}
+        >
           {amenities.map((a) => {
             const Icon = a.icon;
             return (
-              <li
-                key={a.id}
-                className="flex flex-col items-start gap-3 rounded-xl border border-border bg-card p-5 transition-colors hover:border-amber-400/60"
-              >
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-400/15 text-amber-700 dark:text-amber-300">
-                  <Icon className="h-5 w-5" />
-                </span>
-                <p className="text-sm font-medium">{a.name}</p>
-              </li>
+              <StaggerItem key={a.id}>
+                <div className="hover-lift group flex h-full flex-col items-start gap-3 rounded-xl border border-border bg-card p-5 hover:border-amber-400/60">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-amber-400/15 text-amber-700 transition-colors group-hover:bg-amber-400/30 dark:text-amber-300">
+                    <Icon className="h-5 w-5 transition-transform group-hover:rotate-6" />
+                  </span>
+                  <p className="text-sm font-medium">{a.name}</p>
+                </div>
+              </StaggerItem>
             );
           })}
-        </ul>
+        </StaggerGroup>
       </div>
     </section>
   );

@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Fuel,
   UtensilsCrossed,
@@ -13,6 +15,7 @@ import {
   Sunrise,
   type LucideIcon,
 } from "lucide-react";
+import { StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 
 type Tile = { icon: LucideIcon; caption: string };
 
@@ -33,31 +36,35 @@ const tiles: Tile[] = [
 
 export function Gallery() {
   return (
-    <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+    <StaggerGroup className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4" stagger={0.04}>
       {tiles.map((t, i) => {
         const Icon = t.icon;
         return (
-          <li
-            key={t.caption}
-            className="group relative aspect-square overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white"
-          >
+          <StaggerItem key={t.caption}>
             <div
-              aria-hidden
-              className={`absolute inset-0 ${
-                i % 3 === 0
-                  ? "bg-[radial-gradient(circle_at_30%_30%,_rgba(251,191,36,0.22),_transparent_55%)]"
-                  : i % 3 === 1
-                    ? "bg-[radial-gradient(circle_at_70%_70%,_rgba(56,189,248,0.18),_transparent_55%)]"
-                    : "bg-[radial-gradient(circle_at_50%_30%,_rgba(167,139,250,0.18),_transparent_55%)]"
-              }`}
-            />
-            <div className="relative flex h-full flex-col items-start justify-between p-5">
-              <Icon className="h-7 w-7 text-amber-300/80" strokeWidth={1.5} />
-              <p className="text-sm font-medium text-slate-200">{t.caption}</p>
+              className={`hover-lift group relative aspect-square overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 text-white`}
+            >
+              <div
+                aria-hidden
+                className={`absolute inset-0 opacity-80 transition-opacity duration-500 group-hover:opacity-100 ${
+                  i % 3 === 0
+                    ? "bg-[radial-gradient(circle_at_30%_30%,_rgba(251,191,36,0.22),_transparent_55%)]"
+                    : i % 3 === 1
+                      ? "bg-[radial-gradient(circle_at_70%_70%,_rgba(56,189,248,0.18),_transparent_55%)]"
+                      : "bg-[radial-gradient(circle_at_50%_30%,_rgba(167,139,250,0.18),_transparent_55%)]"
+                }`}
+              />
+              <div className="relative flex h-full flex-col items-start justify-between p-5">
+                <Icon
+                  className="h-7 w-7 text-amber-300/80 transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3"
+                  strokeWidth={1.5}
+                />
+                <p className="text-sm font-medium text-slate-200">{t.caption}</p>
+              </div>
             </div>
-          </li>
+          </StaggerItem>
         );
       })}
-    </ul>
+    </StaggerGroup>
   );
 }

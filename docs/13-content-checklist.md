@@ -20,6 +20,19 @@ This is everything we need from the owner to replace placeholders and ship the s
 - [ ] Brand colors (primary, accent) — or accept the default modern blue + amber
 - [ ] Tagline (1 short line) — or accept the placeholder
 
+## Hero video (optional but high impact)
+
+The hero section has a video slot at `public/videos/hero.mp4`. If you drop a file there:
+
+- It auto-plays muted in a loop behind the hero text (mixed at 40% opacity, blended over the animated background)
+- Falls back gracefully to the animated CSS background if the file is missing or fails to load
+- Recommended specs: 1920×1080, 8–15 seconds, MP4 (H.264), under 8 MB. Footage to look for:
+  - Slow-moving aerial of a truck pulling into the lot at dusk
+  - First-person POV from the cab approaching the exit
+  - Time-lapse of pumps / store / lights at night
+  - Drone shot of the facility from above
+- Free sources for stock truck/highway footage: Pexels, Pixabay, Coverr (all CC0 / royalty-free)
+
 ## Photos
 
 Drop all photos into `public/images/`. Suggested set (the more the better):

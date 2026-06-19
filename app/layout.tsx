@@ -4,6 +4,7 @@ import "./globals.css";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { StructuredData } from "@/components/structured-data";
+import { SmoothScroll } from "@/components/motion/smooth-scroll";
 import { siteConfig } from "@/lib/site-config";
 
 const geistSans = Geist({
@@ -68,6 +69,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-background text-foreground">
         <StructuredData />
+        <SmoothScroll />
         <SiteHeader />
         <main className="flex-1">{children}</main>
         <SiteFooter />

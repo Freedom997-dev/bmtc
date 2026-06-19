@@ -35,12 +35,17 @@ export default function ContactPage() {
 
   return (
     <>
-      <section className="bg-slate-950 text-white">
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
+      <section className="relative isolate overflow-hidden bg-slate-950 text-white">
+        <div aria-hidden className="absolute inset-0 bg-aurora opacity-50" />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(251,191,36,0.18),_transparent_60%)]"
+        />
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">
             Contact & Location
           </p>
-          <h1 className="mt-2 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
+          <h1 className="mt-2 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
             Talk to us. Or just roll in.
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-slate-300">

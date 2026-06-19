@@ -96,6 +96,14 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-05-21** — Cinematic motion pass:
+  - Added `motion` (Framer Motion) + `lenis` (smooth scroll)
+  - New `components/motion/` primitives: `Reveal`, `StaggerGroup`/`StaggerItem`, `AnimatedNumber`, `Parallax`, `SmoothScroll`, `Marquee`
+  - New `components/cinematic-hero-bg.tsx` — animated aurora + diagonal light streaks + film grain + optional `<video>` slot at `/videos/hero.mp4`
+  - New section `components/sections/marquee-strip.tsx` — looping ticker between Hero and ServicesStrip
+  - Every home + inner section now uses scroll-triggered reveals; cards have hover lift + glow; hero stats count up; CTAs glow on hover
+  - All animations respect `prefers-reduced-motion`
+  - See [docs/14-motion-cinematics.md](docs/14-motion-cinematics.md)
 - **2026-05-11** — Initial scaffold complete:
   - Next.js 16.2.6 + React 19.2.4 + Tailwind v4 + TypeScript
   - shadcn/ui (base-nova preset, @base-ui/react primitives) — button, card, dialog, input, label, select, separator, sheet, textarea. Custom `asChild` support added to Button via `@radix-ui/react-slot`.

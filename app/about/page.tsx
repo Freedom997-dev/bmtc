@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Mountain, ShieldCheck, HeartHandshake, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/site-config";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 
 export const metadata: Metadata = {
   title: "About",
@@ -31,19 +32,30 @@ const trustPoints = [
 export default function AboutPage() {
   return (
     <>
-      <section className="bg-slate-950 text-white">
-        <div className="mx-auto w-full max-w-6xl px-4 py-16 sm:px-6 md:py-20 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">
-            About
-          </p>
-          <h1 className="mt-2 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl">
-            About {siteConfig.name}
-          </h1>
-          <p className="mt-4 max-w-3xl text-lg text-slate-300">
-            We&apos;re a full-service travel center on {siteConfig.highway.interstate} —
-            built around fast fuel, hot food, clean rest, and parking that&apos;s easy
-            to swing into. Whatever brings you to our exit, we&apos;re glad you stopped.
-          </p>
+      <section className="relative isolate overflow-hidden bg-slate-950 text-white">
+        <div aria-hidden className="absolute inset-0 bg-aurora opacity-50" />
+        <div
+          aria-hidden
+          className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(251,191,36,0.18),_transparent_60%)]"
+        />
+        <div className="relative mx-auto w-full max-w-6xl px-4 py-20 sm:px-6 md:py-24 lg:px-8">
+          <Reveal>
+            <p className="text-sm font-semibold uppercase tracking-wider text-amber-300">
+              About
+            </p>
+          </Reveal>
+          <Reveal delay={0.08}>
+            <h1 className="mt-2 max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+              About {siteConfig.name}
+            </h1>
+          </Reveal>
+          <Reveal delay={0.16}>
+            <p className="mt-4 max-w-3xl text-lg text-slate-300">
+              We&apos;re a full-service travel center on {siteConfig.highway.interstate} —
+              built around fast fuel, hot food, clean rest, and parking that&apos;s easy
+              to swing into. Whatever brings you to our exit, we&apos;re glad you stopped.
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -95,23 +107,22 @@ export default function AboutPage() {
           <h2 className="mt-2 max-w-2xl text-3xl font-bold tracking-tight">
             Quiet operations, loud results
           </h2>
-          <div className="mt-10 grid gap-5 md:grid-cols-3">
+          <StaggerGroup className="mt-10 grid gap-5 md:grid-cols-3" stagger={0.1}>
             {trustPoints.map((p) => {
               const Icon = p.icon;
               return (
-                <div
-                  key={p.title}
-                  className="flex flex-col gap-4 rounded-2xl border border-border bg-card p-7"
-                >
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/15 text-amber-700 dark:text-amber-300">
-                    <Icon className="h-6 w-6" />
-                  </span>
-                  <h3 className="text-xl font-semibold tracking-tight">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground">{p.body}</p>
-                </div>
+                <StaggerItem key={p.title}>
+                  <div className="hover-lift group flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-7 hover:border-amber-400/60">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-amber-400/15 text-amber-700 transition-colors group-hover:bg-amber-400/30 dark:text-amber-300">
+                      <Icon className="h-6 w-6 transition-transform group-hover:scale-110" />
+                    </span>
+                    <h3 className="text-xl font-semibold tracking-tight">{p.title}</h3>
+                    <p className="text-sm text-muted-foreground">{p.body}</p>
+                  </div>
+                </StaggerItem>
               );
             })}
-          </div>
+          </StaggerGroup>
         </div>
       </section>
 

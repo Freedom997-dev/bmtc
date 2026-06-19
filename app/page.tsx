@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/hero";
+import { MarqueeStrip } from "@/components/sections/marquee-strip";
 import { ServicesStrip } from "@/components/sections/services-strip";
 import { AboutPreview } from "@/components/sections/about-preview";
 import { ServicesDetail } from "@/components/sections/services-detail";
@@ -12,6 +13,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <MarqueeStrip />
       <ServicesStrip />
       <AboutPreview />
       <ServicesDetail />
