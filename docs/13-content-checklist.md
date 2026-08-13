@@ -16,7 +16,7 @@ This is everything we need from the owner to replace placeholders and ship the s
 
 ## Branding
 
-- [ ] Logo (SVG preferred, PNG with transparent background OK) → `public/logo.svg`
+- [x] Logo → `public/images/logo.png` (also generates `app/icon.png`, `app/apple-icon.png`, `app/favicon.ico`)
 - [ ] Brand colors (primary, accent) — or accept the default modern blue + amber
 - [ ] Tagline (1 short line) — or accept the placeholder
 

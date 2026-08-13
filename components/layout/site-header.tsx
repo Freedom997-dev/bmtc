@@ -26,12 +26,12 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2.5">
           <Image
-            src="/logo.svg"
+            src="/images/logo.png"
             alt={`${siteConfig.name} home`}
-            width={36}
-            height={36}
+            width={40}
+            height={40}
             priority
-            className="h-9 w-9"
+            className="h-10 w-10 rounded-md"
           />
           <span className="hidden text-base font-semibold tracking-tight sm:inline">
             {siteConfig.name}

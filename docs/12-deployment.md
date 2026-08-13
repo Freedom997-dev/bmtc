@@ -58,7 +58,7 @@ Vercel auto-deploys on `git push`:
 
 - [ ] `lib/site-config.ts` has confirmed business facts (no `TODO:` markers)
 - [ ] All hero / facility photos exist in `public/images/`
-- [ ] Logo at `public/logo.svg`
+- [x] Logo at `public/images/logo.png` + generated favicons (`app/icon.png`, `app/apple-icon.png`, `app/favicon.ico`)
 - [ ] `pnpm build` succeeds locally
 - [ ] `pnpm lint` passes
 - [ ] Lighthouse: Performance ≥ 90, A11y ≥ 95, SEO ≥ 95

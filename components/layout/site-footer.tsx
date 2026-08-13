@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { siteConfig, googleMapsUrl } from "@/lib/site-config";
 import { mainNav } from "@/lib/nav";
@@ -31,9 +32,18 @@ export function SiteFooter() {
     <footer className="mt-auto border-t border-border/60 bg-muted/30">
       <div className="mx-auto grid w-full max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-4 lg:px-8">
         <div className="space-y-3">
-          <p className="text-base font-semibold tracking-tight">
-            {siteConfig.name}
-          </p>
+          <div className="flex items-center gap-2.5">
+            <Image
+              src="/images/logo.png"
+              alt={`${siteConfig.name} logo`}
+              width={36}
+              height={36}
+              className="h-9 w-9 rounded-md"
+            />
+            <p className="text-base font-semibold tracking-tight">
+              {siteConfig.name}
+            </p>
+          </div>
           <p className="text-sm text-muted-foreground">{siteConfig.shortTagline}</p>
         </div>
 

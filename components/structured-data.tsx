@@ -13,6 +13,7 @@ export function StructuredData() {
     telephone: siteConfig.phone,
     email: siteConfig.email,
     image: `${siteConfig.url}/images/hero.jpg`,
+    logo: `${siteConfig.url}/images/logo.png`,
     priceRange: "$$",
     address: {
       "@type": "PostalAddress",

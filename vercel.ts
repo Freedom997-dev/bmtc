@@ -15,9 +15,5 @@ export const config: VercelConfig = {
       maxAge: "1 year",
       immutable: true,
     }),
-    routes.cacheControl("/logo.svg", {
-      public: true,
-      maxAge: "1 week",
-    }),
   ],
 };
