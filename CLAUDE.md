@@ -98,6 +98,13 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-08-13** — Domain pointed at production + git remote connected:
+  - Local project linked to existing Vercel project `bmtc` (team `fcgs-projects-38c74417`, prod URL `https://bmtc-seven.vercel.app`)
+  - Custom domain **`bmtcplaza.com`** (+ `www.bmtcplaza.com`) added to the Vercel project via `vercel domains add`
+  - Domain registrar is GoDaddy (`domaincontrol.com` nameservers) — DNS not yet pointed at Vercel. Owner needs to add two `A` records at GoDaddy: `@ -> 76.76.21.21` and `www -> 76.76.21.21` (or switch nameservers to `ns1/ns2.vercel-dns.com`) for the domain to go live
+  - `lib/site-config.ts` `url` fallback updated from `bluemountaintravelcenter.com` to `bmtcplaza.com` to match — this feeds `sitemap.ts`, canonical metadata, and the JSON-LD `LocalBusiness` schema
+  - Note: business-facts table below still says email/hours are TBD, but `lib/site-config.ts` already has concrete values for both with no `TODO` marker — needs owner confirmation to resolve the discrepancy
+  - Local working directory initialized as a git repo and connected to `https://github.com/Freedom997-dev/bmtc.git` (`origin`), branch `main` tracking `origin/main`
 - **2026-05-21** — Marathon blue wash on alternating sections:
   - `--muted` in `app/globals.css` changed from neutral `oklch(0.97 0 0)` (no hue) to **`oklch(0.965 0.018 248)`** — a light cool blue wash with a hint of Marathon's brand blue
   - Affects every section using `bg-muted/30` (AboutPreview, AmenitiesGrid, LocationPreview, inner-page secondary sections) — they now read subtly on-brand instead of generically gray

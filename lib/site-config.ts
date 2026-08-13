@@ -3,7 +3,7 @@ export const siteConfig = {
   legalName: "Blue Mountain Travel Center LLC",
   tagline: "Your Highway Home — 24/7 Diesel, Food, Showers & Parking",
   shortTagline: "Fuel up. Eat well. Rest easy.",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bluemountaintravelcenter.com",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bmtcplaza.com",
   description:
     "Full-service truck stop and travel center in the USA. Diesel, hot food, clean showers, laundry, driver lounge, and 24/7 truck parking.",
 
