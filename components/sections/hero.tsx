@@ -29,7 +29,7 @@ export function Hero() {
 
         <Reveal delay={0.08}>
           <h1 className="max-w-4xl text-balance text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
-            Your highway home —{" "}
+            Your highway home:{" "}
             <span className="bg-gradient-to-r from-blue-200 via-blue-400 to-blue-600 bg-clip-text text-transparent">
               24/7 diesel, food, showers & parking
             </span>

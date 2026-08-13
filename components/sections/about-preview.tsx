@@ -20,7 +20,7 @@ export function AboutPreview() {
           <p className="text-lg text-muted-foreground">
             {siteConfig.name} is a full-service travel center on {siteConfig.highway.interstate}.
             Whether you&apos;re a long-haul trucker, an RV family, or a road-tripper
-            taking the long way home — we&apos;re open every hour of every day with the
+            taking the long way home, we&apos;re open every hour of every day with the
             fuel, food, and rest you need to keep going.
           </p>
           <div>
@@ -38,7 +38,7 @@ export function AboutPreview() {
             <div className="relative aspect-[4/3] h-full overflow-hidden rounded-2xl border border-border">
               <Image
                 src="/images/station-dusk.jpg"
-                alt="Blue Mountain Travel Center at dusk — Marathon station with the Eagle Mart store"
+                alt="Blue Mountain Travel Center at dusk, Marathon station with the Eagle Mart store"
                 fill
                 sizes="(min-width: 768px) 50vw, 100vw"
                 className="object-cover"

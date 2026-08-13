@@ -18,7 +18,7 @@ export function LocationPreview() {
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Easy on, easy off</h2>
           <p className="text-base text-muted-foreground">
             Take {siteConfig.highway.interstate} to {siteConfig.highway.exit}. Watch
-            for the lit Marathon price sign — that&apos;s us.
+            for the lit Marathon price sign. That&apos;s us.
           </p>
 
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">

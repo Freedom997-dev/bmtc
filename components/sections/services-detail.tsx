@@ -12,7 +12,7 @@ export function ServicesDetail() {
               Services in detail
             </p>
             <h2 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
-              Fuel, food, rest, parking — done right
+              Fuel, food, rest, parking: done right
             </h2>
           </div>
         </Reveal>

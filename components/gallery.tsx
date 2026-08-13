@@ -30,7 +30,7 @@ const tiles: Tile[] = [
   {
     kind: "photo",
     src: "/images/station-dusk.jpg",
-    alt: "Station at dusk — canopy lit, Eagle Mart on the side",
+    alt: "Station at dusk, canopy lit, Eagle Mart on the side",
     caption: "Lit lot at dusk",
   },
   {

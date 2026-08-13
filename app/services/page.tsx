@@ -27,7 +27,7 @@ export default function ServicesPage() {
             Everything you need under one roof
           </h1>
           <p className="mt-4 max-w-3xl text-lg text-slate-300">
-            Fuel, food, rest, and parking — done right and open 24/7.
+            Fuel, food, rest, and parking: done right and open 24/7.
           </p>
         </div>
       </section>

@@ -18,7 +18,7 @@ export const services: Service[] = [
     name: "Fuel",
     short: "Marathon diesel & gas, 24/7",
     description:
-      "Marathon-branded diesel lanes for big rigs and standard pumps for cars, RVs, and pickups — open every hour of every day, with a price sign you can spot from the highway.",
+      "Marathon-branded diesel lanes for big rigs and standard pumps for cars, RVs, and pickups, open every hour of every day, with a price sign you can spot from the highway.",
     bullets: [
       "Marathon diesel for class 8 trucks",
       "Regular, mid, and premium gasoline",
@@ -35,7 +35,7 @@ export const services: Service[] = [
     name: "Food & Store",
     short: "Eagle Mart convenience store",
     description:
-      "Eagle Mart on-site — coffee, cold drinks, sandwiches, snacks, milk, and ice. Categorized cooler walls for sport drinks, water, dairy, and soda so you can grab what you need fast.",
+      "Eagle Mart on-site: coffee, cold drinks, sandwiches, snacks, milk, and ice. Categorized cooler walls for sport drinks, water, dairy, and soda so you can grab what you need fast.",
     bullets: [
       "Hot coffee around the clock",
       "Cold drinks: soda, sport, water, dairy",

@@ -42,7 +42,7 @@ export async function submitContact(input: ContactInput): Promise<ContactResult>
       from,
       to,
       replyTo: data.email,
-      subject: `[${data.subject}] ${data.name} — ${siteConfig.name} contact form`,
+      subject: `[${data.subject}] ${data.name} via ${siteConfig.name} contact form`,
       text: [
         `Name: ${data.name}`,
         `Email: ${data.email}`,

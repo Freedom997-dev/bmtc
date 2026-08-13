@@ -8,7 +8,7 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 
 export const metadata: Metadata = {
   title: "About",
-  description: `Get to know ${siteConfig.name} — a full-service travel center built for drivers and travelers.`,
+  description: `Get to know ${siteConfig.name}, a full-service travel center built for drivers and travelers.`,
   alternates: { canonical: "/about" },
 };
 
@@ -26,7 +26,7 @@ const trustPoints = [
   {
     icon: Sparkles,
     title: "Spotless facilities",
-    body: "Showers, restrooms, and lounge cleaned on a strict rotation — not a marketing line.",
+    body: "Showers, restrooms, and lounge cleaned on a strict rotation. Not a marketing line.",
   },
 ];
 
@@ -52,7 +52,7 @@ export default function AboutPage() {
           </Reveal>
           <Reveal delay={0.16}>
             <p className="mt-4 max-w-3xl text-lg text-slate-300">
-              We&apos;re a full-service travel center on {siteConfig.highway.interstate} —
+              We&apos;re a full-service travel center on {siteConfig.highway.interstate},
               built around fast fuel, hot food, clean rest, and parking that&apos;s easy
               to swing into. Whatever brings you to our exit, we&apos;re glad you stopped.
             </p>
@@ -71,7 +71,7 @@ export default function AboutPage() {
             </h2>
             <p className="text-base text-muted-foreground">
               Drivers spend a lot of life on the road. We started this travel center
-              with one belief — the people who keep America moving deserve a stop
+              with one belief: the people who keep America moving deserve a stop
               that actually feels good to pull into. Bright pumps, real food, hot
               showers, and a lot you&apos;re happy to park in. No fuss.
             </p>
@@ -88,7 +88,7 @@ export default function AboutPage() {
           <div className="relative aspect-[4/3] overflow-hidden rounded-2xl border border-border">
             <Image
               src="/images/station-dusk.jpg"
-              alt="Front of Blue Mountain Travel Center — Marathon canopy with the Eagle Mart store and OPEN 24/7 sign at dusk"
+              alt="Front of Blue Mountain Travel Center, Marathon canopy with the Eagle Mart store and OPEN 24/7 sign at dusk"
               fill
               sizes="(min-width: 768px) 50vw, 100vw"
               className="object-cover"

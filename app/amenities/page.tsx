@@ -46,7 +46,7 @@ export default function AmenitiesPage() {
               A look around the center
             </h2>
             <p className="max-w-2xl text-base text-muted-foreground">
-              These are placeholder tiles for now — drop real photos into{" "}
+              These are placeholder tiles for now. Drop real photos into{" "}
               <code className="rounded bg-muted px-1.5 py-0.5 text-xs">
                 /public/images/gallery/
               </code>{" "}

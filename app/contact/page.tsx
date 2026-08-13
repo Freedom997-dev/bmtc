@@ -152,7 +152,7 @@ export default function ContactPage() {
               We&apos;ll write back during business hours
             </h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              For anything urgent, call us — we&apos;re always open.
+              For anything urgent, call us. We&apos;re always open.
             </p>
             <div className="mt-6">
               <ContactForm />

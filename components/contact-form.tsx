@@ -56,7 +56,7 @@ export function ContactForm() {
     return (
       <div className="rounded-2xl border border-emerald-500/30 bg-emerald-50 p-8 text-center dark:bg-emerald-950/30">
         <CheckCircle2 className="mx-auto h-10 w-10 text-emerald-600 dark:text-emerald-400" />
-        <h3 className="mt-4 text-xl font-semibold tracking-tight">Thanks — message sent</h3>
+        <h3 className="mt-4 text-xl font-semibold tracking-tight">Thanks! Message sent</h3>
         <p className="mt-2 text-sm text-muted-foreground">
           We&apos;ll get back to you as soon as we can. For anything urgent, please call us.
         </p>

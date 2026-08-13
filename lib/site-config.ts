@@ -1,7 +1,7 @@
 export const siteConfig = {
   name: "Blue Mountain Travel Center",
   legalName: "Blue Mountain Travel Center LLC",
-  tagline: "Your Highway Home — 24/7 Diesel, Food, Showers & Parking",
+  tagline: "Your Highway Home: 24/7 Diesel, Food, Showers & Parking",
   shortTagline: "Fuel up. Eat well. Rest easy.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bmtcplaza.com",
   description:
@@ -50,7 +50,7 @@ export const siteConfig = {
 
   whyUs: [
     { title: "30+ truck spots", body: "Spacious, well-lit parking with overnight stay welcome." },
-    { title: "Spotless showers", body: "Cleaned hourly — a real shower after a long haul." },
+    { title: "Spotless showers", body: "Cleaned hourly for a real shower after a long haul." },
     { title: "Hot food till late", body: "Restaurant + grab-and-go open when the highway is quiet." },
   ],
 } as const;

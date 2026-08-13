@@ -23,7 +23,7 @@ export function CtaBanner() {
               Call ahead, or just roll in. We&apos;re always open.
             </h2>
             <p className="mt-3 text-base text-slate-300">
-              Questions about parking, fuel, or fleet accounts? Talk to us — we&apos;re
+              Questions about parking, fuel, or fleet accounts? Talk to us. We&apos;re
               happy to help before you arrive.
             </p>
           </div>
