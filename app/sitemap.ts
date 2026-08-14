@@ -9,7 +9,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${base}/`, lastModified, changeFrequency: "monthly", priority: 1 },
     { url: `${base}/about`, lastModified, changeFrequency: "yearly", priority: 0.6 },
     { url: `${base}/services`, lastModified, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${base}/fuel-card`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${base}/amenities`, lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${base}/blog`, lastModified, changeFrequency: "weekly", priority: 0.5 },
     { url: `${base}/contact`, lastModified, changeFrequency: "yearly", priority: 0.6 },
   ];
 }

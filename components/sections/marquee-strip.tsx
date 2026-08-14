@@ -1,7 +1,6 @@
 import {
   Fuel,
   Coffee,
-  ShowerHead,
   ParkingSquare,
   Wifi,
   Truck,
@@ -12,8 +11,7 @@ import { Marquee } from "@/components/motion/marquee";
 const items = [
   { icon: Clock, label: "Open 24/7" },
   { icon: Fuel, label: "Diesel & Gas" },
-  { icon: ShowerHead, label: "Spotless Showers" },
-  { icon: ParkingSquare, label: "30+ Truck Spots" },
+  { icon: ParkingSquare, label: "30+ Parking Spots" },
   { icon: Coffee, label: "Hot Coffee Anytime" },
   { icon: Wifi, label: "Free WiFi" },
   { icon: Truck, label: "RVs Welcome" },

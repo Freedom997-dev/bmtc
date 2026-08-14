@@ -5,7 +5,7 @@ export function StructuredData() {
 
   const data = {
     "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "GasStation", "TruckStop"],
+    "@type": ["LocalBusiness", "GasStation"],
     name: siteConfig.name,
     legalName: siteConfig.legalName,
     description: siteConfig.description,
@@ -47,12 +47,10 @@ export function StructuredData() {
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "Diesel", value: true },
       { "@type": "LocationFeatureSpecification", name: "Gasoline", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Showers", value: true },
       { "@type": "LocationFeatureSpecification", name: "Restaurant", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Truck Parking", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Parking", value: true },
       { "@type": "LocationFeatureSpecification", name: "WiFi", value: true },
       { "@type": "LocationFeatureSpecification", name: "ATM", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Laundry", value: true },
     ],
     aggregateRating: {
       "@type": "AggregateRating",

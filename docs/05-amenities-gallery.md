@@ -11,7 +11,9 @@ Show off the facility visually and list every extra amenity that doesn't fit cle
 ## Sections
 
 1. **Page hero** — H1 "Amenities & Gallery"
-2. **Amenities grid** — Icon + label tiles for: Free WiFi · ATM · Convenience Store · Driver Lounge · Laundry · Pet-friendly area · 24/7 Open · CAT scales (if offered) · Truck wash (if offered) · Maintenance partner (if any)
+2. **Amenities grid** — Icon + label tiles for: Free WiFi · ATM · Convenience Store · Driver Lounge · Pet-friendly area · 24/7 Open · Well-lit/monitored lot · RVs welcome · Hot coffee 24/7 · CAT scales (if offered) · Truck wash (if offered) · Maintenance partner (if any)
+
+Laundry and showers are **not available at this location** and were removed from the amenities list and gallery (2026-08-14).
 3. **Photo gallery** — Responsive grid using `next/image`. Click/tap opens lightbox.
 4. **CTA** — "Plan your stop" link to `/contact`
 

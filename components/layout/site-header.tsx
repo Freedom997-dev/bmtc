@@ -38,18 +38,32 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-0.5 lg:flex">
           {mainNav.map((item) => {
             const active =
-              item.href === "/"
+              !item.external &&
+              (item.href === "/"
                 ? pathname === "/"
-                : pathname?.startsWith(item.href);
+                : pathname?.startsWith(item.href));
+            if (item.external) {
+              return (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-md px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                >
+                  {item.label}
+                </a>
+              );
+            }
             return (
               <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground",
+                  "rounded-md px-2.5 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground",
                   active && "text-foreground",
                 )}
               >
@@ -59,7 +73,7 @@ export function SiteHeader() {
           })}
         </nav>
 
-        <div className="hidden items-center gap-2 md:flex">
+        <div className="hidden items-center gap-2 lg:flex">
           <Button asChild size="sm" className="gap-2">
             <a href={`tel:${siteConfig.phone}`}>
               <Phone className="h-4 w-4" />
@@ -71,7 +85,7 @@ export function SiteHeader() {
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger
             aria-label="Open navigation menu"
-            className="md:hidden"
+            className="lg:hidden"
             render={<Button variant="ghost" size="icon" />}
           >
             <Menu className="h-5 w-5" />
@@ -83,9 +97,24 @@ export function SiteHeader() {
             <nav className="mt-4 flex flex-col gap-1 px-4">
               {mainNav.map((item) => {
                 const active =
-                  item.href === "/"
+                  !item.external &&
+                  (item.href === "/"
                     ? pathname === "/"
-                    : pathname?.startsWith(item.href);
+                    : pathname?.startsWith(item.href));
+                if (item.external) {
+                  return (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setOpen(false)}
+                      className="rounded-md px-3 py-3 text-base font-medium text-muted-foreground transition-colors hover:bg-accent hover:text-foreground"
+                    >
+                      {item.label}
+                    </a>
+                  );
+                }
                 return (
                   <Link
                     key={item.href}

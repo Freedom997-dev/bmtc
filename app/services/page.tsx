@@ -6,7 +6,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Services",
-  description: `Diesel, food, showers, laundry, driver lounge, and 24/7 truck parking at ${siteConfig.name}.`,
+  description: `Diesel, food, driver lounge, and 24/7 parking at ${siteConfig.name}.`,
   alternates: { canonical: "/services" },
 };
 

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import {
-  ShowerHead,
   ParkingSquare,
   Coffee,
   Wifi,
@@ -63,8 +62,7 @@ const tiles: Tile[] = [
     alt: "Front view of the fuel canopy with red, white, and blue bunting",
     caption: "Wide and welcoming",
   },
-  { kind: "icon", icon: ParkingSquare, caption: "Truck parking" },
-  { kind: "icon", icon: ShowerHead, caption: "Private showers" },
+  { kind: "icon", icon: ParkingSquare, caption: "Parking" },
   { kind: "icon", icon: Coffee, caption: "24/7 coffee" },
   { kind: "icon", icon: Wifi, caption: "Free WiFi" },
 ];

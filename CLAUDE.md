@@ -28,7 +28,8 @@ A marketing / info website for **Blue Mountain Travel Center LLC**, a full-servi
 | Phone | TBD | **Needs owner confirmation** |
 | Email | TBD | **Needs owner confirmation** |
 | Hours | TBD — likely 24/7 for a truck stop | **Needs owner confirmation** |
-| Services offered | Fuel (diesel + gas), Food, Showers / Laundry / Driver Lounge, Truck Parking & Overnight Stay | Confirmed (from owner during brainstorming) |
+| Services offered | Fuel (diesel + gas), Food, Driver Lounge, Truck Parking & Overnight Stay, Fleet Fuel Cards | Confirmed (from owner during brainstorming) |
+| Showers / Laundry | Not available at this location | Confirmed — removed from site 2026-08-14 |
 
 ---
 
@@ -36,6 +37,7 @@ A marketing / info website for **Blue Mountain Travel Center LLC**, a full-servi
 
 - **Next.js 16** (App Router) + **TypeScript**
 - **Tailwind CSS v4** + **shadcn/ui** components
+- **Inter** (via `next/font/google`) for all sans-serif UI text; **Geist Mono** kept for `<code>` snippets
 - **lucide-react** icons
 - **react-hook-form + zod** for forms
 - **Resend** (via Server Action) for contact email, with `mailto:` fallback
@@ -98,6 +100,19 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-08-14** — Font switch, service-list correction, new Fuel Card/Blog pages, nav expansion (branch `updates/2026-08-14`):
+  - **Font**: swapped `Geist` for **Inter** (`next/font/google`) as the site's sans-serif font. Also fixed a pre-existing bug in `app/globals.css` where `--font-sans: var(--font-sans);` was self-referential and never actually resolved to the injected font variable — real body/heading font-family was silently falling back to the browser default (Times New Roman) before this fix. `--font-sans` now correctly points at `var(--font-inter)`. Geist Mono kept for `<code>` snippets.
+  - **Showers & Laundry removed everywhere** — not available at this location. Touched: `lib/services.ts` (dropped shower/laundry copy from the old "Showers & Lounge" service), `lib/amenities.ts` (dropped `laundry`), `lib/site-config.ts` (tagline, description, and the `whyUs` "Spotless showers" card all rewritten), `components/sections/hero.tsx` (headline + stats row dropped to 3 items, no replacement), `components/sections/why-us.tsx` (also fixed a pre-existing icon/content mismatch bug — the Truck icon was incorrectly paired with the "Spotless showers" card; now correctly pairs Truck→"30+ truck spots" and Soup→"Hot food till late", grid changed from 3-col to 2-col), `components/sections/marquee-strip.tsx`, `components/gallery.tsx`, `components/structured-data.tsx` (JSON-LD `amenityFeature`), `lib/testimonials.ts` (one quote referenced showers), `app/about/page.tsx`, `app/opengraph-image.tsx`, `app/services/page.tsx` and `app/amenities/page.tsx` metadata.
+  - **Follow-up same day**: owner clarified the "Showers & Lounge" service shouldn't be deleted outright — the **Lounge** half (WiFi + TVs, no shower/laundry copy) stays as its own core service, and "Truck Parking" was renamed to just **Parking**. `lib/services.ts` now has 4 services (`"fuel" | "food" | "lounge" | "parking"`); `components/sections/services-strip.tsx` grid restored to 4-column.
+  - **Third follow-up same day**: fixed the "Find us" section's map alignment — the map (`components/map-embed.tsx`) was sized by a fixed `aspect-[16/9]` independent of its grid row, so at 60% column width it rendered much taller than the 40% text/photo column beside it, leaving a large empty gap under the shorter column. `components/sections/location-preview.tsx` now overrides the map to `md:aspect-auto md:h-full` so it stretches to match the row height (driven by the text column's natural content height) at `md+`; mobile stacking keeps the original `aspect-[16/9]`. The `/contact` page's separate `<MapEmbed />` usage (full-width, no alignment issue) is untouched.
+  - **Second follow-up same day**: owner flagged that "30+ truck spots" overclaims — not every parking spot may fit a truck. All truck-specific parking-capacity wording changed to generic "parking spots": hero stat, marquee ticker, `whyUs` card, Parking service description/bullets, gallery caption, `services`/`layout` metadata, and the JSON-LD `amenityFeature` name. `components/sections/why-us.tsx`'s Truck icon swapped for `ParkingSquare` to match. Left alone (not parking-capacity claims): "class 8 trucks" on the Fuel service/page (about diesel lanes), and "long-haul trucker" as a driver-type description on the homepage About preview.
+  - **"Truck Stop" wording removed** — not how BMTC wants to be positioned; "travel center" used consistently instead. Removed `"TruckStop"` from the JSON-LD `@type` array in `components/structured-data.tsx` (kept `LocalBusiness`, `GasStation`), removed `"truck stop"` from `app/layout.tsx` SEO keywords, reworded `lib/site-config.ts` description.
+  - **New page `/fuel-card`** (`app/fuel-card/page.tsx`) — fleet fuel card acceptance info page. The specific accepted card networks (EFS, Comdata, Fuelman, TCH, etc.) are a `TODO`-style placeholder pending owner confirmation, per this file's own rule against inventing business facts.
+  - **New page `/blog`** (`app/blog/page.tsx`) — simple "Coming soon" placeholder. No CMS/content source wired up yet.
+  - **Nav expanded** from 5 to 8 items: Home, About, Services, **Fuel Card**, Amenities, **Blog**, **Reviews**, Contact. `lib/nav.ts`'s `NavItem` type gained an `external?: boolean` flag — **Reviews** links out to `siteConfig.googleBusinessUrl` in a new tab rather than being an on-site page. `components/layout/site-header.tsx` and `components/layout/site-footer.tsx` both updated to render external items as plain `<a target="_blank">`. Header's desktop-nav breakpoint moved from `md` to `lg` to avoid crowding with the extra items.
+  - Investigated connecting the Fuel Card page to Google Business Profile for live fuel-price updates (as originally requested) — not feasible as a website-side integration: GMB has no public API for a third party to pull fuel prices back out; that data flows the other way (station → Google via a feed). Owner chose the fleet-card-acceptance-page interpretation instead.
+  - `app/sitemap.ts` updated with the two new routes.
+  - Both new pages, and the routing to them, went through `npm run build` + `npm run lint` (clean) and a full manual pass on every page via the browser tool.
 - **2026-08-13** — Domain pointed at production + git remote connected:
   - Local project linked to existing Vercel project `bmtc` (team `fcgs-projects-38c74417`, prod URL `https://bmtc-seven.vercel.app`)
   - Custom domain **`bmtcplaza.com`** (+ `www.bmtcplaza.com`) added to the Vercel project via `vercel domains add`

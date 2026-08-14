@@ -31,7 +31,7 @@ export function Hero() {
           <h1 className="max-w-4xl text-balance text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl">
             Your highway home:{" "}
             <span className="bg-gradient-to-r from-blue-200 via-blue-400 to-blue-600 bg-clip-text text-transparent">
-              24/7 diesel, food, showers & parking
+              24/7 diesel, food & parking
             </span>
           </h1>
         </Reveal>
@@ -80,10 +80,9 @@ export function Hero() {
         </Reveal>
 
         <Reveal delay={0.32}>
-          <dl className="mt-6 grid w-full max-w-3xl grid-cols-2 gap-x-6 gap-y-4 border-t border-white/10 pt-8 sm:grid-cols-4">
+          <dl className="mt-6 grid w-full max-w-3xl grid-cols-3 gap-x-6 gap-y-4 border-t border-white/10 pt-8">
             <Stat label="Open" value="24 / 7" />
-            <NumericStat label="Truck spots" value={30} suffix="+" />
-            <Stat label="Showers" value="Hourly clean" />
+            <NumericStat label="Parking spots" value={30} suffix="+" />
             <Stat label="WiFi" value="Free" />
           </dl>
         </Reveal>
