@@ -9,13 +9,15 @@ Persistent top navigation that adapts cleanly to mobile and keeps the "Call Now"
 
 ## Behavior
 
-### Desktop (≥ md)
+### Desktop (≥ lg)
 
 - Logo on the left (links to `/`)
-- Horizontal nav: Home · About · Services · Amenities · Contact
+- Horizontal nav: Home · About · Services · Fuel Card · Amenities · Blog · Reviews · Contact
+  - **Reviews** is an external link (`siteConfig.googleBusinessUrl`, opens in a new tab) — not a route on this site
 - Right side: phone number + **Call Now** button (`tel:` link)
+- Breakpoint moved from `md` to `lg` once the nav grew from 5 to 8 items, to avoid crowding at tablet widths
 
-### Mobile (< md)
+### Mobile / tablet (< lg)
 
 - Logo on the left
 - Hamburger button on the right

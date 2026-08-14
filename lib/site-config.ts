@@ -1,11 +1,11 @@
 export const siteConfig = {
   name: "Blue Mountain Travel Center",
   legalName: "Blue Mountain Travel Center LLC",
-  tagline: "Your Highway Home: 24/7 Diesel, Food, Showers & Parking",
+  tagline: "Your Highway Home: 24/7 Diesel, Food & Parking",
   shortTagline: "Fuel up. Eat well. Rest easy.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bmtcplaza.com",
   description:
-    "Full-service truck stop and travel center in the USA. Diesel, hot food, clean showers, laundry, driver lounge, and 24/7 truck parking.",
+    "Full-service travel center in the USA. Diesel, hot food, a driver lounge, and 24/7 parking.",
 
   address: {
     street: "511 PA-61",
@@ -49,8 +49,7 @@ export const siteConfig = {
   },
 
   whyUs: [
-    { title: "30+ truck spots", body: "Spacious, well-lit parking with overnight stay welcome." },
-    { title: "Spotless showers", body: "Cleaned hourly for a real shower after a long haul." },
+    { title: "30+ parking spots", body: "Spacious, well-lit parking with overnight stay welcome." },
     { title: "Hot food till late", body: "Restaurant + grab-and-go open when the highway is quiet." },
   ],
 } as const;

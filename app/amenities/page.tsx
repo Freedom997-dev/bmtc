@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Amenities & Gallery",
-  description: `WiFi, ATM, store, lounge, laundry, and more at ${siteConfig.name}.`,
+  description: `WiFi, ATM, store, lounge, and more at ${siteConfig.name}.`,
   alternates: { canonical: "/amenities" },
 };
 

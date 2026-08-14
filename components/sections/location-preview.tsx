@@ -58,9 +58,9 @@ export function LocationPreview() {
           </div>
         </Reveal>
 
-        <Reveal direction="left" className="md:col-span-3">
-          <div className="overflow-hidden rounded-2xl border border-border shadow-xl">
-            <MapEmbed />
+        <Reveal direction="left" className="md:col-span-3 md:h-full">
+          <div className="overflow-hidden rounded-2xl border border-border shadow-xl md:h-full">
+            <MapEmbed className="md:aspect-auto md:h-full" />
           </div>
         </Reveal>
       </div>

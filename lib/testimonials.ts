@@ -7,7 +7,7 @@ export type Testimonial = {
 export const testimonials: Testimonial[] = [
   {
     quote:
-      "Cleanest showers I've found on the East Coast and the parking is wide enough you can actually swing in without a fight. I plan my runs to stop here.",
+      "Cleanest lot I've found on the East Coast and the parking is wide enough you can actually swing in without a fight. I plan my runs to stop here.",
     name: "Mike",
     context: "OTR driver, I-81",
   },

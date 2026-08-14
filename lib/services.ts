@@ -1,7 +1,7 @@
-import { Fuel, UtensilsCrossed, ShowerHead, ParkingSquare, type LucideIcon } from "lucide-react";
+import { Fuel, UtensilsCrossed, Sofa, ParkingSquare, type LucideIcon } from "lucide-react";
 
 export type Service = {
-  id: "fuel" | "food" | "showers" | "parking";
+  id: "fuel" | "food" | "lounge" | "parking";
   name: string;
   short: string;
   description: string;
@@ -48,37 +48,37 @@ export const services: Service[] = [
     hasPhoto: true,
   },
   {
-    id: "showers",
-    name: "Showers & Lounge",
-    short: "Clean showers + driver lounge",
+    id: "lounge",
+    name: "Lounge",
+    short: "Quiet driver lounge + WiFi",
     description:
-      "Private, spotless showers cleaned between every guest, a quiet driver lounge with WiFi and TVs, and on-site laundry.",
+      "A quiet driver lounge with free WiFi and TVs to relax and recharge between runs.",
     bullets: [
-      "Private showers cleaned hourly",
       "Comfortable driver lounge",
       "Free WiFi throughout",
-      "On-site laundry machines",
+      "TVs",
+      "Quiet space to relax between runs",
     ],
-    icon: ShowerHead,
-    image: "/images/showers.jpg",
-    imageAlt: "Clean shower facility at Blue Mountain Travel Center",
+    icon: Sofa,
+    image: "/images/lounge.jpg",
+    imageAlt: "Driver lounge at Blue Mountain Travel Center",
     hasPhoto: false,
   },
   {
     id: "parking",
-    name: "Truck Parking",
+    name: "Parking",
     short: "Overnight parking welcome",
     description:
-      "30+ well-lit truck and RV parking spots with overnight stay welcome, security cameras, and easy on/off highway access.",
+      "30+ well-lit parking spots with overnight stay welcome, security cameras, and easy on/off highway access.",
     bullets: [
-      "30+ truck-sized spots",
+      "30+ parking spots",
       "Well-lit lot, security cameras",
       "Overnight stay welcome",
       "RVs and oversized vehicles OK",
     ],
     icon: ParkingSquare,
     image: "/images/parking.jpg",
-    imageAlt: "Well-lit truck parking lot at night",
+    imageAlt: "Well-lit parking lot at night",
     hasPhoto: false,
   },
 ];

@@ -13,9 +13,9 @@ One typed object that every page, header, footer, JSON-LD block, and metadata he
 export const siteConfig = {
   name: "Blue Mountain Travel Center",
   legalName: "Blue Mountain Travel Center LLC",
-  tagline: "Your Highway Home — 24/7 Diesel, Food, Showers & Parking",
-  url: "https://bluemountaintravelcenter.com",        // production URL
-  description: "Full-service truck stop on ... offering diesel, hot food, clean showers, and 24/7 parking.",
+  tagline: "Your Highway Home: 24/7 Diesel, Food & Parking",
+  url: "https://bmtcplaza.com",                       // production URL
+  description: "Full-service travel center on ... offering diesel, hot food, a driver lounge, and 24/7 parking.",
   address: {
     street: "TODO: confirm street",
     city: "TODO: confirm city",

@@ -87,9 +87,7 @@ export default function OpengraphImage() {
           <span>·</span>
           <span>Diesel & gas</span>
           <span>·</span>
-          <span>Showers</span>
-          <span>·</span>
-          <span>Truck parking</span>
+          <span>Parking</span>
         </div>
       </div>
     ),

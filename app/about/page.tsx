@@ -26,7 +26,7 @@ const trustPoints = [
   {
     icon: Sparkles,
     title: "Spotless facilities",
-    body: "Showers, restrooms, and lounge cleaned on a strict rotation. Not a marketing line.",
+    body: "Restrooms and lounge cleaned on a strict rotation. Not a marketing line.",
   },
 ];
 
@@ -72,8 +72,8 @@ export default function AboutPage() {
             <p className="text-base text-muted-foreground">
               Drivers spend a lot of life on the road. We started this travel center
               with one belief: the people who keep America moving deserve a stop
-              that actually feels good to pull into. Bright pumps, real food, hot
-              showers, and a lot you&apos;re happy to park in. No fuss.
+              that actually feels good to pull into. Bright pumps, real food,
+              and a lot you&apos;re happy to park in. No fuss.
             </p>
             <p className="text-base text-muted-foreground">
               <em>This story is a placeholder.</em> Drop your real history,

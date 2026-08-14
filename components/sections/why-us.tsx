@@ -1,8 +1,8 @@
-import { Sparkles, Truck, Soup } from "lucide-react";
+import { ParkingSquare, Soup } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/motion/reveal";
 
-const icons = [Sparkles, Truck, Soup];
+const icons = [ParkingSquare, Soup];
 
 export function WhyUs() {
   return (
@@ -18,9 +18,9 @@ export function WhyUs() {
             </h2>
           </div>
         </Reveal>
-        <StaggerGroup className="grid gap-5 md:grid-cols-3" stagger={0.1}>
+        <StaggerGroup className="grid gap-5 sm:grid-cols-2" stagger={0.1}>
           {siteConfig.whyUs.map((item, i) => {
-            const Icon = icons[i] ?? Sparkles;
+            const Icon = icons[i] ?? ParkingSquare;
             return (
               <StaggerItem key={item.title}>
                 <div className="hover-lift group flex h-full flex-col gap-4 rounded-2xl border border-border bg-card p-7 hover:border-blue-600/60">
