@@ -100,6 +100,11 @@ npm start           # serve production build locally
 
 ## Change log (most recent first)
 
+- **2026-11-18** — New hero backdrop photo:
+  - Added owner-provided Marathon storefront/canopy shot as `public/images/hero-marathon-plaza.webp`
+  - `components/sections/hero.tsx` now passes `photoSrc="/images/hero-marathon-plaza.webp"` to `CinematicHeroBg` (previously relied on the component's `hero-marathon-sky.jpg` default); the old sky image is left in place, unused by the hero
+  - `npm run lint` + `npm run build` clean (the single `contact-form.tsx` React-Compiler warning is pre-existing)
+
 - **2026-08-14** — Font switch, service-list correction, new Fuel Card/Blog pages, nav expansion (branch `updates/2026-08-14`):
   - **Font**: swapped `Geist` for **Inter** (`next/font/google`) as the site's sans-serif font. Also fixed a pre-existing bug in `app/globals.css` where `--font-sans: var(--font-sans);` was self-referential and never actually resolved to the injected font variable — real body/heading font-family was silently falling back to the browser default (Times New Roman) before this fix. `--font-sans` now correctly points at `var(--font-inter)`. Geist Mono kept for `<code>` snippets.
   - **Showers & Laundry removed everywhere** — not available at this location. Touched: `lib/services.ts` (dropped shower/laundry copy from the old "Showers & Lounge" service), `lib/amenities.ts` (dropped `laundry`), `lib/site-config.ts` (tagline, description, and the `whyUs` "Spotless showers" card all rewritten), `components/sections/hero.tsx` (headline + stats row dropped to 3 items, no replacement), `components/sections/why-us.tsx` (also fixed a pre-existing icon/content mismatch bug — the Truck icon was incorrectly paired with the "Spotless showers" card; now correctly pairs Truck→"30+ truck spots" and Soup→"Hot food till late", grid changed from 3-col to 2-col), `components/sections/marquee-strip.tsx`, `components/gallery.tsx`, `components/structured-data.tsx` (JSON-LD `amenityFeature`), `lib/testimonials.ts` (one quote referenced showers), `app/about/page.tsx`, `app/opengraph-image.tsx`, `app/services/page.tsx` and `app/amenities/page.tsx` metadata.

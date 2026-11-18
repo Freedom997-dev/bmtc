@@ -12,6 +12,7 @@ Communicate in five seconds: *what we offer, where we are, how to reach us.* Giv
 
 1. **Hero** — `components/sections/hero.tsx`
    Full-width facility photo, H1 ("Your Highway Home — 24/7 Diesel, Food, Showers & Parking"), location pill, CTAs: **Call Now** (`tel:`) and **Get Directions** (Google Maps deep link).
+   Backdrop photo is `public/images/hero-marathon-plaza.webp` (Marathon canopy + storefront), passed to `CinematicHeroBg` via its `photoSrc` prop.
 
 2. **Quick services strip** — `components/sections/services-strip.tsx`
    Four icon cards: Fuel · Food · Showers · Parking. Reads from `lib/services.ts`.

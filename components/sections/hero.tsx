@@ -10,7 +10,10 @@ import { GoogleRatingBadge } from "@/components/google-rating-badge";
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden bg-slate-950 text-white">
-      <CinematicHeroBg videoSrc="/videos/hero.mp4" />
+      <CinematicHeroBg
+        videoSrc="/videos/hero.mp4"
+        photoSrc="/images/hero-marathon-plaza.webp"
+      />
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-4 py-24 sm:px-6 md:py-32 lg:py-40 lg:px-8">
         <Reveal>
